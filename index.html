@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Форма HTML</title>
+  </head>
+
+  <body>
+
+    <h1>Форма HTML</h1>
+
+    <form action="/"
+      method="POST">
+
+      <label>
+        Имя:<br />
+        <input name="field-name-1"
+          value="Текстовое поле" />
+      </label><br />
+
+      <label>
+        E-mail:<br />
+        <input name="field-email"
+          type="email"
+          placeholder="Поле email" />
+      </label><br />
+
+      <label>
+        Дата рождения:<br />
+        <input name="field-date"
+          value="Поле даты"
+          type="date" />
+      </label><br />
+
+       Пол:<br />
+      <label><input type="radio" checked="checked"
+        name="radio-group-1" value="Значение1" />
+        М</label>
+      <label><input type="radio"
+        name="radio-group-1" value="Значение2" />
+        Ж</label><br />
+
+        Количество конечностей:<br />
+      <label><input type="radio" checked="checked"
+        name="radio-group-1" value="Значение1" />
+        1</label>
+      <label><input type="radio" checked="checked"
+        name="radio-group-1" value="Значение1" />
+        2</label>
+      <label><input type="radio" checked="checked"
+        name="radio-group-1" value="Значение1" />
+        3</label>
+      <label><input type="radio"
+        name="radio-group-1" value="Значение2" />
+        4</label><br />
+
+      <label>
+        Сверхспособности (множественный выбор из списка):
+        <br />
+        <select name="field-name-4[]"
+          multiple="multiple">
+          <option value="Значение1">Бессмертие</option>
+          <option value="Значение2" selected="selected">Прохождение сквозь стены</option>
+          <option value="Значение3" selected="selected">Левитация</option>
+        </select>
+      </label><br />
+      
+      <label>
+      Биография:<br />
+        <textarea name="field-name-2">Многострочное текстовое поле</textarea>
+      </label><br />
+
+      <label>
+       
+      
+      <br />
+      <label><input type="checkbox" checked="checked"
+        name="check-1" />
+        С контрактом ознакомлен(-а)</label><br />
+
+      
+      <input type="submit" value="Отправить" />
+    </form>
+
+  </body>
+
+</html>
