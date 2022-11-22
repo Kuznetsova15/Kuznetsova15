@@ -1,0 +1,60 @@
+//Программа-клиент 
+#include <iostream> 
+#include <fstream> 
+//#include <windows.h> 
+using namespace std; 
+// структура данных запроса клиента 
+struct Person 
+{ 
+char name[25]; //имя 
+char pred[4]; //предмет 
+int mark[4]; //оценка 
+}A; 
+void main() { 
+setlocale(LC_ALL, "rus"); 
+char* nameR = "C:\REQUEST.bin"; 
+//файл для запросов клиентов 
+char* nameA = "C:\ANSWER.bin"; 
+//файл для ответов сервера 
+ofstream f_REQ; 
+ifstream f_ANS; 
+long pred_size; 
+int answer;while (true) 
+{ 
+// передача данных от клиента серверу 
+cout « "Введите запрос: Фамилия Предметы Оценки"«endl; 
+cin » A.name; 
+for (int i=0; i<4; i++) 
+ cin»A.pred[i]»A.mark[i]; 
+f_REQ.open( nameR, ios::app |ios::binary); 
+//открытие файла REQUEST 
+f_REQ.write((char*)&A, sizeof(A)); 
+//запись запроса в файл REQUEST 
+f_REQ.close(); 
+// поступил ответ от сервера? 
+f_ANS.open(nameA, ios::binary); 
+//открытие файла ANSWER 
+f_ANS.seekg(0, ios::end); 
+//переход в конец файла ANSWER 
+pred_size = f_ANS.tellg();while (pred_size >= f_ANS.tellg()) 
+{ Sleep(100); 
+// ждем и переходим в конец файла ANSWER 
+f_ANS.seekg(0, ios::end); } 
+// получение ответа от сервера 
+f_ANS.seekg(pred_size, ios::beg); 
+// на начало нового ответа 
+f_ANS.read ((char*)&answer, sizeof(answer)) ; //считывание 
+ответа 
+f_ANS.close(); 
+// расшифровка ответа 
+switch (answer) { 
+case 0: {cout « "Нет\n";break;} 
+case 1: {cout « "Обычная\n";break;} 
+case 2: {cout « "Повышенная\n";break;} 
+case -1: {cout « "1 Задолженность\n";break;} 
+case -2: {cout « "2 Задолженности\n";break;} 
+case -3: {cout « "3 Задолженности\n";break;} 
+case -4: {cout « "4 Задолженности\n";break;} 
+} 
+} //while 
+}
