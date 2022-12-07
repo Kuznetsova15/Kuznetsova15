@@ -1,43 +1,323 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project4", "Project4\Project4.vcxproj", "{6A32612D-D47A-4ABD-9C1F-B19A9ECA99F8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FEB9EE9C-F9C6-4948-8E59-AED3070E56BC}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project3", "..\Project3\Project3\Project3.vcxproj", "{13BA1C0F-B6DC-49F2-B6FA-703952D7B8F6}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6A32612D-D47A-4ABD-9C1F-B19A9ECA99F8}.Debug|x64.ActiveCfg = Debug|x64
-		{6A32612D-D47A-4ABD-9C1F-B19A9ECA99F8}.Debug|x64.Build.0 = Debug|x64
-		{6A32612D-D47A-4ABD-9C1F-B19A9ECA99F8}.Debug|x86.ActiveCfg = Debug|Win32
-		{6A32612D-D47A-4ABD-9C1F-B19A9ECA99F8}.Debug|x86.Build.0 = Debug|Win32
-		{6A32612D-D47A-4ABD-9C1F-B19A9ECA99F8}.Release|x64.ActiveCfg = Release|x64
-		{6A32612D-D47A-4ABD-9C1F-B19A9ECA99F8}.Release|x64.Build.0 = Release|x64
-		{6A32612D-D47A-4ABD-9C1F-B19A9ECA99F8}.Release|x86.ActiveCfg = Release|Win32
-		{6A32612D-D47A-4ABD-9C1F-B19A9ECA99F8}.Release|x86.Build.0 = Release|Win32
-		{13BA1C0F-B6DC-49F2-B6FA-703952D7B8F6}.Debug|x64.ActiveCfg = Debug|x64
-		{13BA1C0F-B6DC-49F2-B6FA-703952D7B8F6}.Debug|x64.Build.0 = Debug|x64
-		{13BA1C0F-B6DC-49F2-B6FA-703952D7B8F6}.Debug|x86.ActiveCfg = Debug|Win32
-		{13BA1C0F-B6DC-49F2-B6FA-703952D7B8F6}.Debug|x86.Build.0 = Debug|Win32
-		{13BA1C0F-B6DC-49F2-B6FA-703952D7B8F6}.Release|x64.ActiveCfg = Release|x64
-		{13BA1C0F-B6DC-49F2-B6FA-703952D7B8F6}.Release|x64.Build.0 = Release|x64
-		{13BA1C0F-B6DC-49F2-B6FA-703952D7B8F6}.Release|x86.ActiveCfg = Release|Win32
-		{13BA1C0F-B6DC-49F2-B6FA-703952D7B8F6}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {2D767F16-AD9C-40A5-9FF4-4F22B7E12E28}
-	EndGlobalSection
-EndGlobal
+////Клиент
+//#include <iostream>
+//#include <fstream>
+//#include <string>
+//#include <Windows.h>
+//using namespace std;
+//string* predmet = new string[4];
+//
+//
+//struct Student
+//{
+//	char Name;
+//	int val[4];
+//}A;
+//int answer;
+//int pred_size;
+//int main() {
+//	string nameR = "REQUEST2.bin";
+//	string nameA = "ANSWER2.bin";
+//	ofstream f_REQ;
+//	ifstream f_ANS;
+//	predmet[0] = "Programming";
+//	predmet[1] = "Algebra";
+//	predmet[2] = "Math";
+//	predmet[3] = "Diskr";
+//	while (true)
+//	{
+//		cout << "Enter Name: " << endl;
+//		cin >> A.Name;
+//		for (int i = 0; i < 4; i++) {
+//			cout << predmet[i] << " grade: " << endl;
+//			cin >> A.val[i];
+//		}
+//		f_REQ.open(nameR, ios::app | ios::binary);
+//		f_REQ.write((char*)&A, sizeof(A));
+//		f_REQ.close();
+//		f_ANS.open(nameA, ios::binary);
+//		f_ANS.seekg(0, ios::end);
+//		pred_size = f_ANS.tellg();
+//		while (pred_size >= f_ANS.tellg())
+//		{
+//			Sleep(100);
+//			f_ANS.seekg(0, ios::end);
+//		}
+//		f_ANS.seekg(pred_size, ios::beg);
+//		f_ANS.read((char*)&answer, sizeof(answer));
+//		f_ANS.close();
+//		cout << answer << endl;
+//		switch (answer)
+//		{
+//			/*case 30000: cout << "No scholarship" << endl;
+//				break;
+//			case 40000: cout << "Scholarship = 1800" << endl;
+//				break;
+//			case 50000: cout << "Scholarship = 2500" << endl;
+//				break;
+//			default: cout << "No scholarship" << endl;
+//				if (answer % 10 == 1) cout << "Programming" << endl;
+//				if (answer % 100 / 10 == 1) cout << "Algebra" << endl;
+//				if (answer % 1000 / 100 == 1) cout << "Math" << endl;
+//				if (answer % 10000 / 1000 == 1) cout << "Diskr" << endl;
+//				break;*/
+//		case 0: { cout << "High \n"; break; }
+//		case 1: {cout << "1 subject \n"; break;}
+//		case 2: {cout << "2 subjects \n"; break;}
+//		case 3: {cout << "3 subjects \n"; break; }
+//		case 4: {cout << "4 subjects \n"; break; }
+//		case 5: {cout << "No \n"; break; }
+//		case 6: {cout << "Normal \n"; break; }
+//		}
+//	}
+//
+//	return 0;
+//}
+
+//Клиент
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <Windows.h>
+using namespace std;
+string* predmet = new string[4];
+
+
+struct Student
+{
+	string Fac;
+	string FacR;
+	string FacA;
+	string Name;
+	int val[4];
+}A;
+int answer;
+int pred_size;
+int main() {
+	string nameR = A.FacR;
+	string nameA = A.FacA;
+	ofstream f_REQ;
+	ifstream f_ANS;
+	predmet[0] = "Programming";
+	predmet[1] = "Algebra";
+	predmet[2] = "Math";
+	predmet[3] = "Diskr";
+	while (true)
+	{
+		cout << "Enter Faculty: " << endl;
+		cin >> A.Fac;
+		string Re = "R.bin";
+		string An = "A.bin";
+		A.FacR = A.Fac + Re;
+		A.FacA = A.Fac + An;
+		cout << "Enter Name: " << endl;
+		cin >> A.Name;
+		for (int i = 0; i < 4; i++) {
+			cout << predmet[i] << " grade: " << endl;
+			cin >> A.val[i];
+		}
+		f_REQ.open(nameR, ios::app | ios::binary);
+		f_REQ.write((char*)&A, sizeof(A));
+		f_REQ.close();
+		f_ANS.open(nameA, ios::binary);
+		f_ANS.seekg(0, ios::end);
+		pred_size = f_ANS.tellg();
+		while (pred_size >= f_ANS.tellg())
+		{
+			Sleep(100);
+			f_ANS.seekg(0, ios::end);
+		}
+		f_ANS.seekg(pred_size, ios::beg);
+		f_ANS.read((char*)&answer, sizeof(answer));
+		f_ANS.close();
+		cout << answer << endl;
+		switch (answer)
+		{
+			/*case 30000: cout << "No scholarship" << endl;
+				break;
+			case 40000: cout << "Scholarship = 1800" << endl;
+				break;
+			case 50000: cout << "Scholarship = 2500" << endl;
+				break;
+			default: cout << "No scholarship" << endl;
+				if (answer % 10 == 1) cout << "Programming" << endl;
+				if (answer % 100 / 10 == 1) cout << "Algebra" << endl;
+				if (answer % 1000 / 100 == 1) cout << "Math" << endl;
+				if (answer % 10000 / 1000 == 1) cout << "Diskr" << endl;
+				break;*/
+		case 0: { cout << "High \n"; break; }
+		case 1: {cout << "1 subject \n"; break; }
+		case 2: {cout << "2 subjects \n"; break; }
+		case 3: {cout << "3 subjects \n"; break; }
+		case 4: {cout << "4 subjects \n"; break; }
+		case 5: {cout << "No \n"; break; }
+		case 6: {cout << "Normal \n"; break; }
+		}
+	}
+
+	return 0;
+}
+
+
+///Сервер
+//#include <iostream>
+//#include <fstream>
+//#include <windows.h>
+//using namespace std;
+//#include <string>
+//struct Student
+//{
+//	char Name;
+//	int val[4];
+//}B;
+//int size_pred;
+//int answer;
+//int main() {
+//	ifstream fR;
+//	ofstream fA;
+//	string nameR = "REQUEST2.bin";
+//	string nameA = "ANSWER2.bin";
+//	cout << "server is working" << endl;
+//	fR.open(nameR, ios::binary);
+//	fR.seekg(0, ios::end);
+//	size_pred = fR.tellg();
+//	fR.close();
+//	while (true)
+//	{
+//		fR.open(nameR, ios::binary);
+//		fR.seekg(0, ios::end);
+//		while (size_pred >= fR.tellg()) {
+//			Sleep(100);
+//			fR.seekg(0, ios::end);
+//		}
+//		fR.seekg(size_pred, ios::beg);
+//		fR.read((char*)&B, sizeof(B));
+//		size_pred = fR.tellg();
+//		fR.close();
+//		/*answer = 60000;
+//		for (int i = 0; i < 4; i++)
+//		{
+//			switch (B.val[i])
+//			{
+//			case 5: if (answer >= 50000) answer = 50000;
+//				break;
+//			case 4: if (answer >= 40000) answer = 40000;
+//				break;
+//			case 3: if (answer >= 30000) answer = 30000;
+//				break;
+//			case 2: if (answer > 22000) answer = 20000;
+//				if (answer >= 20000)
+//					answer = answer + pow(10, i);
+//				break;
+//			}
+//		}*/
+//		int a = 0;
+//		for (int i = 0; i < 4; i++)
+//		{
+//			if (B.val[i] == 2) a += 1;
+//			else {
+//				if (B.val[i] == 3) a += 10;
+//				else {
+//					if (B.val[i] == 4) a += 100;
+//					else a += 1000;
+//				}
+//			}  //1120
+//		}
+//		if (a % 10) answer = a % 10;
+//		else {
+//			if (a%100) answer=5;
+//			else {
+//				if (a % 1000) answer = 6;
+//				else answer = 0;
+//			}
+//		}
+//
+//		fA.open(nameA, ios::binary | ios::app);
+//		fA.write((char*)&answer, sizeof(answer));
+//		fA.close();
+//	}
+//	return 0;
+//}
+
+//Сервер
+#include <iostream>
+#include <fstream>
+#include <windows.h>
+using namespace std;
+#include <string>
+struct Student
+{
+	string Fac;
+	string FacR;
+	string FacA;
+	string Name;
+	int val[4];
+}B;
+int size_pred;
+int answer;
+int main() {
+	ifstream fR;
+	ofstream fA;
+	string nameR = B.FacR;
+	string nameA = B.FacA;
+	cout << "server is working" << endl;
+	fR.open(nameR, ios::binary);
+	fR.seekg(0, ios::end);
+	size_pred = fR.tellg();
+	fR.close();
+	while (true)
+	{
+		fR.open(nameR, ios::binary);
+		fR.seekg(0, ios::end);
+		while (size_pred >= fR.tellg()) {
+			Sleep(100);
+			fR.seekg(0, ios::end);
+		}
+		fR.seekg(size_pred, ios::beg);
+		fR.read((char*)&B, sizeof(B));
+		size_pred = fR.tellg();
+		fR.close();
+		/*answer = 60000;
+		for (int i = 0; i < 4; i++)
+		{
+			switch (B.val[i])
+			{
+			case 5: if (answer >= 50000) answer = 50000;
+				break;
+			case 4: if (answer >= 40000) answer = 40000;
+				break;
+			case 3: if (answer >= 30000) answer = 30000;
+				break;
+			case 2: if (answer > 22000) answer = 20000;
+				if (answer >= 20000)
+					answer = answer + pow(10, i);
+				break;
+			}
+		}*/
+		int a = 0;
+		for (int i = 0; i < 4; i++)
+		{
+			if (B.val[i] == 2) a += 1;
+			else {
+				if (B.val[i] == 3) a += 10;
+				else {
+					if (B.val[i] == 4) a += 100;
+					else a += 1000;
+				}
+			}  //1120
+		}
+		if (a % 10) answer = a % 10;
+		else {
+			if (a % 100) answer = 5;
+			else {
+				if (a % 1000) answer = 6;
+				else answer = 0;
+			}
+		}
+
+		fA.open(nameA, ios::binary | ios::app);
+		fA.write((char*)&answer, sizeof(answer));
+		fA.close();
+	}
+	return 0;
+}
+
