@@ -3,14 +3,14 @@
 <html>
 
   <head>
-    <title>Ширина, выравнивание, float</title>
+    <title>Сайт для задания 2</title>
   </head>
 
   <body style="margin:0;">
 
     <div style="width:100%; background-color:#1a4; padding: 10px; height:120px;">
       <img style="float:left; margin:10px; width:100px; height:100px;" src="https://cs13.pikabu.ru/avatars/2869/x2869284-1940165164.png" alt="Картинка не загрузилась" />
-      <div style=" background-color:#183; padding:10px;"><center>Сайт для задания 2</center></div>
+      <div style=" background-color:#183; padding:10px;"><center>Заголовок</center></div>
 	    <nechet style="background-colour:#157">
     </div>
 	  <nav id="mynav"><a hrev="#ssylki"> Ссылки <\ a> | <a hrev="#tabl">Таблица<\a> | <a hrev="#forma">Форма<\a> </nav>
@@ -23,27 +23,47 @@
 			<area shape="circle" coords="950,300,500" href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/map" alt="">
 		</map>
 		<ol id="Main">
-			<li><a href="http://example.com/">абсолютную гиперссылку</a></li>
-			<li><a href="https://example.com/">абсолютную в протоколе https</a></li>
-			<li><a href="ftp://public.ftp-servers.example.com/mydirectory/myfile.txt">ссылку на файл на сервере FTP без авторизации</a></li>
-			<li><a href="ftp://user001:secretpassword@private.ftp-servers.example.com/mydirectory/myfile.txt">ссылку на файл на сервере FTP с авторизацией</a></li>
-			<li><a href="https://ru.wikipedia.org/wiki/FTP?#footer-info-copyright">ссылку на фрагмент страницы некоторого сайта</a></li>
-			<li><a href="#myFooter">ссылку на фрагмент текущей страницы</a></li>
-			<li><a href="https://en.wikipedia.org/w/index.php?go=Go&search=bcvcvbbvccvb&title=Special%3ASearch&ns0=1">ссылку с двумя параметрами в URL;</a></li>
-			<li><a>ссылку без href</a></li>
-			<li><a href="">ссылку с пустым href</a></li>
-			<li><a href="https://example.com/" rel="nofollow">ссылку, по которой запрещен переход поисковикам</a></li>
-			<!--noindex--><li><a href="https://example.com/">запрещенную для индексации поисковиками</a></li><!--/noindex-->
-			<li><p>DGFHgjdkljn<a href="https://example.com/">контекстную в тексте абзаца</a>-lkhlkfdgklkkf</p></li>
-			<li><a href="https://example.com/"><img src="https://st2.depositphotos.com/3765753/5349/v/450/depositphotos_53491489-stock-illustration-example-rubber-stamp-vector-over.jpg" alt=""></a></li>
-			<li><img src="https://st2.depositphotos.com/3765753/5349/v/450/depositphotos_53491489-stock-illustration-example-rubber-stamp-vector-over.jpg" usemap="#mapSquare" alt="">Левый верхний угол и справа полуокружность</li>
-			<li><a href="2.html">абсолютную гиперссылку</a></li>
-			<li><a href="./about/2.html">относительную на страницу в текущем каталоге</a></li>
-			<li><a href="./">относительную на страницу в каталоге уровнем выше текущего</a></li>
-			<li><a href="../">относительную на страницу в каталоге двумя уровнями выше</a></li>
-			<li><a href="/">сокращенную на главную</a></li>
-			<li><a href="/asd">сокращенную ссылку на внутреннюю</a></li>
-		</ol>
+			//<ul>
+			<li><a href="#Main" title="Главная часть">Ссылки</a></li>
+			<li><a href="#myForm" title="Форма">Форма</a></li>
+		</ul>
+		<ol id="Main">
+			<li><a href="http://example.com/">Абсолютная гиперссылка на главную страницу сайта example.com</a></li>
+			<li><a href="https://example.com/">Абсолютная на главную в протоколе https</a></li>
+			<li><a href="ftp://ftp-server.example.com/file.txt">Ссылка на файл на сервере FTP без авторизации</a></li>
+			<li><a href="ftp://login:12345@ftp-server.example.com/file.txt">Ссылка на файл на сервере FTP с авторизацией</a></li>
+			<li><a href="https://moodle.kubsu.ru?#page-footer">Ссылка на фрагмент страницы некоторого сайта</a></li>
+			<li><a href="#myForm">Ссылка на фрагмент текущей страницы</a></li>
+			<li><a href="https://moodle.kubsu.ru/course/index.php?search=Программирование&search=Алгебра">Ссылка с двумя параметрами в URL</a></li>
+		<li> <nav> <ul>
+                        <li><a href="https://example.com/" title="Ссылка на сайт example"> Ссылка с title </a></li>
+                        <li><a href="https://moodle.kubsu.ru" title="Ссылка на сайт moodle"> Ссылка с title </a></li>
+                </ul> </nav> </li>
+                        <li><a>Ссылка без href</a></li>
+			<li><a href="">Ссылка с пустым href</a></li>
+			<li><a href="https://example.com/" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+			<noindex><li><a href="https://example.com/">Ссылка, запрещённая для индексации поисковиками</a></li></noindex>
+			<li><p>Контекстная ссылка — это ссылка, размещенная в тексте, которая при этом гармонично в него вписывается. Задача <a href="https://example.com/">контекстной ссылки в тексте абзаца</a> - не просто передать вес нужной странице, но и завлечь на эту страницу пользователя.</p></li>
+			<li><a href="https://example.com/"><img src="https://cs13.pikabu.ru/avatars/2869/x2869284-1940165164.png" alt=""></a></li>
+                        <li>
+                         <map name="ssylka">
+                         <area shape = "rect" coords="0, 0, 100, 125"
+                           a href="https://example.com/"> </a>
+			 <area shape = "rect" coords="110, 0, 210, 50"
+                           a href="https://example.com/"> </a>
+	                 <area shape = "circle" coords="210, 150, 50" //
+                           a href="https://example.com/"> </a>
+                         </map>
+                         <img src="https://cs13.pikabu.ru/avatars/2869/x2869284-1940165164.png" usemap="#ssylka"></li>
+			<li><a href="1.html">Относительная на страницу в текущем каталоге</a></li>
+                        <li><a href="about/2.html"> Относительная на страницу в каталоге about</a></li>
+			<li><a href="./">Относительная на страницу в каталоге уровнем выше текущего</a></li>
+			<li><a href="../">Относительная на страницу в каталоге двумя уровнями выше</a></li>
+			<li><a href="/">Сокращенная на главную</a></li>
+			<li><a href="/1">Сокращенная на внутреннюю</a></li>
+	  </ol>
+
+	  <ol id="myForm"> //
 
       <head>
 	      <div id="tabl">
