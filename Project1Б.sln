@@ -105,11 +105,11 @@ int main() {
 	{
 		cout << "Enter Faculty: " << endl;
 		cin >> A.Fac;
-		string Re = "R.bin";
-		string An = "A.bin";
-		A.FacR = A.Fac + Re;
-		A.FacA = A.Fac + An;
-		cout << "Enter Name: " << endl;
+                if(A.Fac=="Bio") { A.FacR = "BioR.bin"; A.FacA="BioA.bin"; }
+		if(A.Fac=="FKTPM") { A.FacR = "FKTPMR.bin"; A.FacA="FKTPMA.bin"; }
+		if(A.Fac=="FT") { A.FacR = "FTR.bin"; A.FacA="FTA.bin"; }
+                if(A.Fac=="Filology") { A.FacR = "FilologyR.bin"; A.FacA="FilologyA.bin"; }
+                cout << "Enter Name: " << endl;
 		cin >> A.Name;
 		for (int i = 0; i < 4; i++) {
 			cout << predmet[i] << " grade: " << endl;
