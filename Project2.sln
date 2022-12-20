@@ -5,12 +5,14 @@
 #include <windows.h> 
 #pragma comment (lib, "Ws2_32.lib") 
 #pragma warning(disable: 4996) 
-using namespace std; 
+ 
 #define SRV_HOST "localhost" 
 #define SRV_PORT 1234 
 #define CLNT_PORT 1235 
 #define BUF_SIZE 64 
  
+using namespace std;
+
 struct Person { 
  int weight; 
  int height; 
@@ -69,9 +71,11 @@ int main() {
 #include <windows.h> 
 #include <string> 
 #pragma comment (lib, "Ws2_32.lib") 
-using namespace std; 
+ 
 #define SRV_PORT 1234 
  
+using namespace std;
+
 struct Person { 
  int weight; 
  int height; 
