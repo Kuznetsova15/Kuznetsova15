@@ -1,0 +1,60 @@
+#header {
+    font-size:25px;
+    font-style:normal;
+    text-align: center;
+  }
+  Main {
+    font-size:25px;
+    font-style:normal;
+  }
+ #myForm {
+    font-size:25px;
+    font-style:normal;
+    text-align: center;
+  }
+  h1, h2, h3{
+    text-align: left;
+  }
+  div{
+    align-items: center;
+  }
+  input, select, textarea{
+    font-size:15px;
+    font-style:normal;
+    background-color: rgb(169, 192, 247);
+    border: 1px solid rgb(4, 20, 82);
+  }
+  footer{
+    font-size:20px;
+    font-style:normal;
+    text-align: left;
+  }
+  table {
+    width:100%;
+    font-size:25px;
+    font-style:normal;
+    border:3px solid black;
+    border-collapse: collapse;
+  }
+  tbody tr:nth-child(odd) {
+    background-color:rgb(169, 167, 211);/* фон нечетных строк */
+  }
+
+  tbody tr:nth-child(even) {
+
+    background-color:rgb(169, 192, 247);/* фон четных строк */
+
+  }
+  th, td {
+    border:1px solid black;
+    border-collapse: collapse;
+  }
+  nav {
+    font-size:20px;
+    font-style:normal;
+    text-align: center;
+  }
+ 
+  a {
+    color:rgb(0, 35, 59);
+  }
