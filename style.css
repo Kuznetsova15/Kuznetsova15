@@ -21,7 +21,7 @@ header{
   height: max-content;
 }
 .overlay {
-    background: url(project/img/druplicon.svg);
+    background: url(druplicon.svg);
     background-color: rgba(0, 0, 0, 0.8);
     background-repeat: no-repeat;
     position: absolute;
@@ -502,7 +502,7 @@ margin-top: -27px;
    padding-top: 230px;
  }
 footer {
-  background: linear-gradient(254.72deg,rgba(255,255,255,.276) -114.85%,rgba(255,255,255,0) 69.04%),url(project/img/D-flying.svg) no-repeat top center,url(project/img/D-footer.svg) no-repeat bottom right/40%,#040613;
+  background: linear-gradient(254.72deg,rgba(255,255,255,.276) -114.85%,rgba(255,255,255,0) 69.04%),url(D-flying.svg) no-repeat top center,url(D-footer.svg) no-repeat bottom right/40%,#040613;
   padding: 117px 0 54px;
   color: #fff;
 }
@@ -556,7 +556,7 @@ label, .checkbox label {
     display: block;
     width: 18px;
     height: 18px;
-    background: url(project/img/phone.svg) no-repeat center;
+    background: url(phone.svg) no-repeat center;
     background-size: contain;
     position: absolute;
     left: 3px;
@@ -568,7 +568,7 @@ label, .checkbox label {
   display: block;
   width: 24px;
   height: 18px;
-  background: url(project/img/mail.svg) no-repeat center;
+  background: url(mail.svg) no-repeat center;
   background-size: contain;
   position: absolute;
   left: 0;
@@ -936,7 +936,8 @@ span.enterprise {
     margin-bottom: 20px;
     margin-top: initial;
 }
-#block-views-block-keys-block .more-link a, #block-views-block-blog-block-1 .more-link a, #block-views-block-team-new .more-link a, .team-grid .more-link a {
+#block-views-block-keys-block .more-link a, #block-views-block-blog-block-1 .more-link a, #block-views-block-team-new .more-link a, .team-grid .more-link a
+{
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -1498,9 +1499,8 @@ span.enterprise {
   width: inherit;
 }
 }
-@font-face{
-    font-family: "Montserrat";
-    src:url(ofont.ru_Montserrat.ttf) format("truetype");
+@font-face
+{
     font-style: normal;
     font-weight:normal;
 }
