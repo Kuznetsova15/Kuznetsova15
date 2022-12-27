@@ -31,12 +31,10 @@ header{
     z-index: 10;
 }
 p{
-  font-family: "Montserrat";
   color: rgba(255,255,255,.8);
   font-size: 14px;
 }
 h1 {
-  font-family: "Montserrat";
   color: white;
   font-weight: bold;
   font-size: 24px;
@@ -94,7 +92,6 @@ a {
   padding: 10px;
   text-decoration: none;
   outline: none;
-  font-family: "Montserrat";
   font-size: 12px;
 }
 #imgHeader{
@@ -168,7 +165,7 @@ ul {
 }
 
 #elem{
-  background:url(project/img/bars.svg);
+  background:url(bars.svg);
   width:30px;
   height: 30px;
 }
@@ -219,7 +216,6 @@ a:hover {
   padding-top: 5px;
   padding-bottom: 10px;
   min-height: 80px;
-  font-family: "Montserrat";
   margin-bottom:30px;
 }
 .support-achievement-description {
@@ -251,7 +247,6 @@ a:hover {
   align-items: center;
 }
 h2 {
-  font-family: "Montserrat";
   font-weight: bold;
   font-size: 24px;
   color: #050c33;
@@ -310,7 +305,7 @@ margin-top: -27px;
   position: absolute;
   width: 115px;
   height: 70px;
-  background: url(project/img/icon-bg.svg) no-repeat center;
+  background: url(icon-bg.svg) no-repeat center;
   background-size: contain;
   left: -54px;
   bottom: -4px;
@@ -411,14 +406,13 @@ margin-top: -27px;
   right: 0;
   bottom: 0;
   left: 0;
-  background: url(project/img/icon-bg.svg) no-repeat;
+  background: url(icon-bg.svg) no-repeat;
   background-size: cover;
   font-size: 16px; 
   line-height: 1.42857143; 
   box-sizing: border-box; 
   position: relative; 
   background: linear-gradient(254.72deg, rgba(255, 255, 255, .276)-114.85%, rgba(255, 255, 255, 0) 69.04%), #040613; 
-  font-family: Montserrat; 
   color: #fff; 
  } 
  .expertise h2{
@@ -428,7 +422,6 @@ margin-top: -27px;
  .conteiner{ 
   font-size: 16px; 
   line-height: 1.42857143; 
-  font-family: Montserrat; 
   color: #fff; 
   box-sizing: border-box; 
   margin-right: auto; 
@@ -444,7 +437,6 @@ margin-top: -27px;
  .row{ 
   font-size: 16px; 
   line-height: 1.42857143; 
-  font-family: Montserrat; 
   color: #fff; 
   box-sizing: border-box; 
   margin-right: -15px; 
@@ -514,7 +506,6 @@ footer {
   background: linear-gradient(254.72deg,rgba(255,255,255,.276) -114.85%,rgba(255,255,255,0) 69.04%),url(project/img/D-flying.svg) no-repeat top center,url(project/img/D-footer.svg) no-repeat bottom right/40%,#040613;
   padding: 117px 0 54px;
   color: #fff;
-  font-family: Montserrat;
 }
 .block-form-title {
   font-size: 22px;
@@ -736,7 +727,7 @@ textarea {
   display: block;
   width: 21px;
   height: 21px;
-  background: url(project/img/checked-icon.svg) no-repeat center;
+  background: url(hecked-icon.svg) no-repeat center;
   background-size: contain;
   transition: opacity 200ms,transform 400ms;
   transform: rotateZ(-30deg);
@@ -802,8 +793,7 @@ footer p {
 }
  #block-tariffs {
   padding: 160px 0 90px;
-  font-family: Montserrat;
-  background: url(project/img/D-background-opacity.svg) no-repeat right top,#fff;
+  background: url(D-background-opacity.svg) no-repeat right top,#fff;
   background-size: cover;
 }
 #block-tariffs .block-title {
@@ -863,7 +853,7 @@ section{
   left: 0;
   width: 13px;
   height: 10px;
-  background: url(project/img/checkmark.svg) no-repeat center;
+  background: url(checkmark.svg) no-repeat center;
   background-size: contain;
 }
 .tariff-footer-btn {
@@ -948,8 +938,6 @@ span.enterprise {
     margin-top: initial;
 }
 #block-views-block-keys-block .more-link a, #block-views-block-blog-block-1 .more-link a, #block-views-block-team-new .more-link a, .team-grid .more-link a {
-  
-  font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -975,7 +963,6 @@ span.enterprise {
   display: flex;
   flex-wrap: wrap;
   text-align: left;
-  font-family: Montserrat;
 }
 .user-teaser-photo {
   margin-bottom: 15px;
@@ -1017,14 +1004,13 @@ span.enterprise {
 }
 
 
-/* ������*/
   
 .review h2{
   text-align: center;
 }
 
 .review-wrapper {
-  background: url(project/img/right-quote-sign.svg) no-repeat;
+  background: url(right-quote-sign.svg) no-repeat;
   background-size: 26%;
   background-position: left top;
 }
@@ -1169,11 +1155,11 @@ span.enterprise {
 }
 
 #review-prev {
-  background: url("project/img/arrow-left.svg") no-repeat;
+  background: url("arrow-left.svg") no-repeat;
 }
 
 #review-next {
-  background: url("project/img/arrow-right.svg") no-repeat;
+  background: url("arrow-right.svg") no-repeat;
 }
 
 #review-prev,
@@ -1277,7 +1263,6 @@ span.enterprise {
   color: #050c33;
   text-decoration: none;
 }
-/*������*/
 /*Clients*/
 
 .clients h2 {
