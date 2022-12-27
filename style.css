@@ -30,7 +30,7 @@ header{
     z-index: 10;
 }
 p{
-  color: rgba(255,255,255,.8);
+  color: rgba(255,255,255, 0.8);
   font-size: 14px;
 }
 h1 {
@@ -93,11 +93,6 @@ a {
   outline: none;
   font-size: 12px;
 }
-#imgHeader{
-  float:left;
-  margin:10px;
-  margin-right:50px;
-}
 
 nav{
   z-index: 1;
@@ -109,6 +104,9 @@ nav{
   visibility: visible;
 }
 #imgHeader{
+  float:left;
+  margin:10px;
+  margin-right:50px;
   visibility: visible;
   position: fixed;
   bottom: 0;
