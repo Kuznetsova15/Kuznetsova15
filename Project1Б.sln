@@ -85,18 +85,17 @@ string* predmet = new string[4];
 struct Student
 {
 	string Fac;
-	string FacR;
-	string FacA;
 	string Name;
 	int val[4];
 }A;
 int answer;
 int pred_size;
 int main() {
-	string nameR = A.FacR;
-	string nameA = A.FacA;
+	string nameR;
+	string nameA = "ANSWER.bin";
 	ofstream f_REQ;
 	ifstream f_ANS;
+	fstream add;
 	predmet[0] = "Programming";
 	predmet[1] = "Algebra";
 	predmet[2] = "Math";
@@ -105,11 +104,9 @@ int main() {
 	{
 		cout << "Enter Faculty: " << endl;
 		cin >> A.Fac;
-                if(A.Fac=="Bio") { A.FacR = "BioR.bin"; A.FacA="BioA.bin"; }
-		if(A.Fac=="FKTPM") { A.FacR = "FKTPMR.bin"; A.FacA="FKTPMA.bin"; }
-		if(A.Fac=="FT") { A.FacR = "FTR.bin"; A.FacA="FTA.bin"; }
-                if(A.Fac=="Filology") { A.FacR = "FilologyR.bin"; A.FacA="FilologyA.bin"; }
-                cout << "Enter Name: " << endl;
+		if (A.Fac == "Bio") nameR = "Bio.bin";
+		if (A.Fac == "PMI") nameR = "PMI.bin";
+		cout << "Enter Name: " << endl;
 		cin >> A.Name;
 		for (int i = 0; i < 4; i++) {
 			cout << predmet[i] << " grade: " << endl;
@@ -247,8 +244,6 @@ using namespace std;
 struct Student
 {
 	string Fac;
-	string FacR;
-	string FacA;
 	string Name;
 	int val[4];
 }B;
@@ -257,8 +252,13 @@ int answer;
 int main() {
 	ifstream fR;
 	ofstream fA;
-	string nameR = B.FacR;
-	string nameA = B.FacA;
+	fstream fad;
+	string nameR;
+	string nameA = "ANSWER.bin";
+	fad.open("Ad.bin");
+	fad >> nameR;
+	fad.close();
+	cout << nameR;
 	cout << "server is working" << endl;
 	fR.open(nameR, ios::binary);
 	fR.seekg(0, ios::end);
@@ -320,4 +320,3 @@ int main() {
 	}
 	return 0;
 }
-
