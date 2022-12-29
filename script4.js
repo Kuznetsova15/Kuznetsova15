@@ -14,10 +14,10 @@ function calc() {
     for(let i = 0; i<10; i++){
         sum+=form.elements['price' + i].value * form.elements['count' + i].value;
     }
-    result.innerHTML = "Total cost: " + sum;
+    result.innerHTML = "Итог: " + sum;
 }
 window.addEventListener("DOMContentLoaded", function (event) {
   console.log("DOM fully loaded and parsed");
-  let b = document.getElementById("CalculateButton");
+  let b = document.getElementById("=");
   b.addEventListener("click", calc);
 });
