@@ -5,7 +5,7 @@ function calc() {
         let price = form.elements['price' + i].value;
         let count = form.elements['count' + i].value;
         if(!count.match(regex)){
-            alert("Error");
+            alert("Подтвердите");
             break;
         }
     }
