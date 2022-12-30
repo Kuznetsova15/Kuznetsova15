@@ -42,15 +42,15 @@ function updatePrice(i) {
     }
   function getPrices() {
     return {
-      itemTypes: [100, 200, 150],
+      itemTypes: [100, 110, 150],
       myradio: {
-        Option1:15,
-        Option2: 10,
-        Option3: 5,
+        Option1:55,
+        Option2: 30,
+        Option3: 43,
       },
       prodProperties: {
-        prop1: 10,
-        prop2: 20,
+        prop1: 30,
+        prop2: 10,
       }
     };
   }
