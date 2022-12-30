@@ -10,7 +10,7 @@ function updatePrice(i) {
       
       
       let radioDiv = document.getElementById("itemRadio"+i);
-      radioDiv.style.display = (select.value == "3" ? "block" : "none");
+      radioDiv.style.display = (select.value != "2" ? "block" : "none");
       
       let itemRadio = document.getElementsByName("myradio"+i);
       itemRadio.forEach(function(radio) {
