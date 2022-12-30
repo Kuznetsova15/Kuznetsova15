@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="style2.css">
+    <title>Сайт для задания 3</title>
+  </head>
+  
+  <body>
+    <div class = "conteiner"><div id = "header" class = "class1"> 
+      <div style="width:100%; background-color:rgb(59, 9, 166); padding: 10px; height:120px;"/>
+      <img style="float: left; margin:10px; width:100px; height:100px;" src="https://cs13.pikabu.ru/avatars/2869/x2869284-1940165164.png" alt="Картинка не загрузилась">
+      <div style="padding:50px;"><center>Мой тренировочный сайт</center></div>
+    </header></div>
+    <div id="navi" class="class1">
+      <nav>
+        <ul id="ul">
+        <a href="#Main" style="float: left; color:rgb(0, 0, 0)">Ссылки</a>
+        <a href="#tabl" style="float: center; color:rgb(0, 0, 0)">Таблица</a>
+        <a href="#myForm" style="float: right; color:rgb(0, 0, 0)">Форма</a>
+        </ul>
+      </nav>
+    </div>
+    <div style="max-width:900px; background-color:rgb(94, 74, 243); margin:auto; margin-top: 5px; padding:10px;">
+		<ol id="Main" class="class2">
+      <h1>Список ссылок:</h1>
+			<li><a href="http://example.com/">Абсолютная гиперссылка на главную страницу сайта example.com</a></li>
+			<li><a href="https://example.com/">Абсолютная на главную в протоколе https</a></li>
+			<li><a href="ftp://ftp-server.example.com/file.txt">Ссылка на файл на сервере FTP без авторизации</a></li>
+			<li><a href="ftp://login:12345@ftp-server.example.com/file.txt">Ссылка на файл на сервере FTP с авторизацией</a></li>
+			<li><a href="https://moodle.kubsu.ru?#page-footer">Ссылка на фрагмент страницы некоторого сайта</a></li>
+			<li><a href="#myForm">Ссылка на фрагмент текущей страницы</a></li>
+			<li><a href="https://moodle.kubsu.ru/course/index.php?search=Программирование&search=Алгебра">Ссылка с двумя параметрами в URL</a></li>
+		<li> <nav> <ul>
+            <li><a href="https://example.com/" title="Ссылка на сайт example"> Ссылка с title </a></li>
+            <li><a href="https://moodle.kubsu.ru" title="Ссылка на сайт moodle"> Ссылка с title </a></li>
+                </ul> </nav> </li>
+                        <li><a>Ссылка без href</a></li>
+			<li><a href="">Ссылка с пустым href</a></li>
+			<li><a href="https://example.com/" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+			<noindex><li><a href="https://example.com/">Ссылка, запрещённая для индексации поисковиками</a></li></noindex>
+			<li><p>Контекстная ссылка — это ссылка, размещенная в тексте, которая при этом гармонично в него вписывается. Задача <a href="https://example.com/">контекстной ссылки в тексте абзаца</a> - не просто передать вес нужной странице, но и завлечь на эту страницу пользователя.</p></li>
+			<li><a href="https://example.com/"><img style="margin:10px; width:600px; height:350px;" src="http://vsegda-pomnim.com/uploads/posts/2022-04/1650290616_13-vsegda-pomnim-com-p-krasivie-odinochnie-tsveti-foto-13.jpg" alt=""></a></li>
+                        <li>
+                         <map name="ssylka">
+                         <area shape = "rect" coords="0, 0, 150, 100"
+                           a href="https://example.com/"> </a>
+			 <area shape = "rect" coords="200, 0, 300, 150"
+                           a href="https://example.com/"> </a>
+	                 <area shape = "circle" coords="500, 150, 50" //
+                           a href="https://example.com/"> </a>
+                         </map>
+                         <img style="margin:10px; width:600px; height:350px;" src="http://vsegda-pomnim.com/uploads/posts/2022-04/1650290616_13-vsegda-pomnim-com-p-krasivie-odinochnie-tsveti-foto-13.jpg" usemap="#ssylka"></li>
+                         <li><a href="1.html">Относительная на страницу в текущем каталоге</a></li>
+                        <li><a href="about/2.html"> Относительная на страницу в каталоге about</a></li>
+			<li><a href="./">Относительная на страницу в каталоге уровнем выше текущего</a></li>
+			<li><a href="../">Относительная на страницу в каталоге двумя уровнями выше</a></li>
+			<li><a href="/">Сокращенная на главную</a></li>
+			<li><a href="/1">Сокращенная на внутреннюю</a></li>
+	  </ol>
+   </div>
+   <div style="max-width:900px; background-color:rgb(94, 74, 243); margin:auto; margin-top: 5px; padding:10px;">
+      <head>
+	      <div id="tabl" class="class2">
+          <h2>Таблица:</h2>
+      </head>
+      <body>
+        <center><table>
+          <tr>
+            <center>Какие книги стоят на трёх полках</center></td>
+          </tr>
+          <tr class "nechet">
+            <th>Полка 1</th>
+            <th>Полка 2</th>
+            <th>Полка 3</th>
+          </tr>
+          <tr>
+            <td colspan="2"><center>"Братья Карамазовы"</center></td>
+            <td>"Преступление и наказание"</td>
+          </tr>
+          <tr class="nechet">
+            <td>Стихи</td>
+            <td>Рассказы</td>
+            <td>Автобиография</td>
+          </tr>
+          <tr>
+            <td>"Любовь к жизни"</td>
+            <td>"Белый Клык"</td>
+            <td>"Сердца трёх"</td>
+          </tr>
+          <tr>
+            <td>"Моби Дик"</td>
+            <td>"Фауст"</td>
+            <td>"Божественная комедия"</td>
+          </tr>
+          <tr class "nechet">
+            <td colspan="3"><center>"Война и мир"</center></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div style="max-width:900px; background-color:rgb(94, 74, 243); margin:auto; margin-top: 5px; padding:10px;">
+   <div id="myForm" class="class2">
+   <head>
+   <h3>Форма:</h3>
+      </head>
+    
+     <center> <body>
+    
+        <form action="/"
+          method="POST">
+    
+          <label>
+            Имя:<br />
+            <input name="field-name-1"
+              value="Текстовое поле" />
+          </label><br />
+    
+          <label>
+            E-mail:<br />
+            <input name="field-email"
+              type="email"
+              placeholder="Поле email" />
+          </label><br />
+    
+          <label>
+            Дата рождения:<br />
+            <input name="field-date"
+              value="Поле даты"
+              type="date" />
+          </label><br />
+    
+           Пол:<br />
+          <label><input type="radio" checked="checked"
+            name="radio-group-1" value="Значение1" />
+            М</label>
+          <label><input type="radio"
+            name="radio-group-1" value="Значение2" />
+            Ж</label><br />
+    
+            Количество конечностей:<br />
+          <label><input type="radio" checked="checked"
+            name="radio-group-1" value="Значение1" />
+            1</label>
+          <label><input type="radio" checked="checked"
+            name="radio-group-1" value="Значение1" />
+            2</label>
+          <label><input type="radio" checked="checked"
+            name="radio-group-1" value="Значение1" />
+            3</label>
+          <label><input type="radio"
+            name="radio-group-1" value="Значение2" />
+            4</label><br />
+    
+          <label>
+            Сверхспособности (множественный выбор из списка):
+            <br />
+            <select name="field-name-4[]"
+              multiple="multiple">
+              <option value="Значение1">Бессмертие</option>
+              <option value="Значение2" selected="selected">Прохождение сквозь стены</option>
+              <option value="Значение3" selected="selected">Левитация</option>
+            </select>
+          </label><br />
+          
+          <label>
+          Биография:<br />
+            <textarea name="field-name-2">Многострочное текстовое поле</textarea>
+          </label><br />
+    
+          <label>
+           
+          
+          <br />
+          <label><input type="checkbox" checked="checked"
+            name="check-1" />
+            С контрактом ознакомлен(-а)</label><br />
+    
+          
+          <input type="submit" value="Отправить" />
+        </form></span>
+    </div>
+    </div>
+   </body>
+
+   <body style="margin:0;">
+
+    <div style="width:100%; background-color:rgb(48, 9, 166); padding: 10px; height:120px;" class="class1">
+      <div style=" background-color:rgb(80, 86, 248); padding:10px;"> <footer>(c) Кузнецова Анастасия; 2022</footer></div>
+    </div>
+ </div>
+</html>

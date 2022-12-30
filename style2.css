@@ -1,0 +1,108 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgb(204, 233, 240);
+    margin:0;
+  }
+ 
+  .class1{
+    width: 100%;
+  }
+  .class2{
+    width: 100%;
+  }
+  #navi{
+    max-width:900px;
+    background-color:rgb(80, 86, 248);
+    margin:auto;
+    margin-top: 5px;
+    height:30px;
+    padding:10px;
+  }
+#header {
+    font-size:25px;
+    font-style:normal;
+    text-align: center;
+    order: 0;
+  }
+  Main {
+    font-size:25px;
+    font-style:normal;
+    order: 2;
+  }
+ #myForm {
+    font-size:25px;
+    font-style:normal;
+    text-align: center;
+    order: 3;
+  }
+  h1, h2, h3{
+    text-align: left;
+  }
+  div{
+    align-items: center;
+  }
+  input, select, textarea{
+    font-size:15px;
+    font-style:normal;
+    background-color: rgb(169, 192, 247);
+    border: 1px solid rgb(4, 20, 82);
+  }
+  footer{
+    font-size:20px;
+    font-style:normal;
+    text-align: left;
+    order: 5;
+  }
+  table {
+    width:100%;
+    font-size:25px;
+    font-style:normal;
+    border:3px solid black;
+    border-collapse: collapse;
+    order: 4;
+  }
+  tbody tr:nth-child(odd) {
+    background-color:rgb(169, 167, 211);/* фон нечетных строк */
+  }
+
+  tbody tr:nth-child(even) {
+
+    background-color:rgb(169, 192, 247);/* фон четных строк */
+
+  }
+  th, td {
+    border:1px solid black;
+    border-collapse: collapse;
+  }
+  nav {
+    font-size:20px;
+    font-style:normal;
+    text-align: center;
+    order: 1;
+  }
+ 
+  a {
+    color:rgb(0, 35, 59);
+  }
+  @media screen and (min-width: 800px) {
+    .container {
+      flex-direction: column;
+    }
+    .class1{
+      width: 100%;
+    }
+    .class2{
+      width: 100%;
+    }
+    #tabl{
+      order:4;
+    }
+    #form{
+      order:3;
+    }
+    #ul li{
+      display:inline;
+    }
+  }
