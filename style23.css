@@ -1,11 +1,11 @@
-.conteiner{
+.body{
     background-color: antiquewhite;
     display: flex;
     justify-content:center;
     margin-top:5%;
     margin-bottom:5%;
 }
-.class2{
+.conteiner{
     padding: 40px;
     width: 250px;
     background-color: rgb(153, 97, 23);
@@ -17,4 +17,8 @@ h3{
     margin-right: 25%;
 }
 
-
+label{
+    padding: 5%;
+    border: 1px solid black;
+    border-radius: 3px;
+}
