@@ -5,19 +5,19 @@ body{
     margin-top:5%;
     margin-bottom:5%;
 }
-.main{
+.conteiner{
     padding: 40px;
     width: 250px;
     background-color: rgb(153, 97, 23);
     border: 2px solid black;
 }
 
-h1{
+h3{
     margin-left: 25%;
     margin-right: 25%;
 }
 
-p{
+label{
     padding: 5%;
     border: 1px solid black;
     border-radius: 3px;
