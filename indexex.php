@@ -16,7 +16,7 @@ $limbs = intval($_POST['radio-2']);
 $superpowers = array($_POST['super']);
 $bio= $_POST['bio'];
 
-$bioreg = "/^\s*\w+[\w\s\.,-]*$/";
+$bioreg = "/^\s*\w+[\w\s\.,-]*$/"><;
 $reg = "/^\w+[\w\s-]*$/";
 $mailreg = "/^[\w\.-]+@([\w-]+\.)+[\w-]{2,4}$/";
 $list_sup = array('inv','walk','fly');
@@ -48,11 +48,11 @@ foreach($superpowers as $checking){
 	}
 }
 
-$user = 'u52978';
-$pass = '4644833';
-$db = new PDO('mysql:host=localhost;dbname=u52978', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+$user = 'u53002';
+$pass = '8089091';
+$db = new PDO('mysql:host=localhost;dbname=u53002', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
 try {
-  $stmt = $db->prepare("INSERT INTO form SET name=:name, email=:email, year=:byear, pol=:pol, limbs=:limbs, bio=:bio");
+  $stmt = $db->prepare("INSERT INTO application SET name=:name, email=:email, year=:byear, pol=:pol, limbs=:limbs, bio=:bio");
   $stmt->bindParam(':name', $name);
   $stmt->bindParam(':email', $email);
   $stmt->bindParam(':byear', $birth_year);
@@ -68,7 +68,7 @@ try {
   
   
   $id = $db->lastInsertId();
-  $sppe= $db->prepare("INSERT INTO super SET name=:name, per_id=:person");
+  $sppe= $db->prepare("INSERT INTO power_pers SET per_id=:person, name=:name");
   $sppe->bindParam(':person', $id);
   foreach($superpowers as $inserting){
 	$sppe->bindParam(':name', $inserting);
