@@ -16,10 +16,10 @@ $limbs = intval($_POST['radio-2']);
 $superpowers = array($_POST['super']);
 $bio= $_POST['bio'];
 
-$bioreg = "/^\s*\w+[\w\s\.,-]*$/"><;
+$bioreg = "/^\s*\w+[\w\s\.,-]*$/";
 $reg = "/^\w+[\w\s-]*$/";
 $mailreg = "/^[\w\.-]+@([\w-]+\.)+[\w-]{2,4}$/";
-$list_sup = array('inv','walk','fly');
+$list_sup = array(1, 2, 3);
 
 if(!preg_match($reg,$name)){
 	print_r('Неверный формат имени');
@@ -37,7 +37,7 @@ if(!preg_match($mailreg,$email)){
 	print_r('Неверный формат email');
 	exit();
 }
-if($pol !== 'male' && $pol !== 'female'){
+if($pol !== 1 && $pol !== 2){
 	print_r('Неверный формат пола');
 	exit();
 }
@@ -52,7 +52,7 @@ $user = 'u53002';
 $pass = '8089091';
 $db = new PDO('mysql:host=localhost;dbname=u53002', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
 try {
-  $stmt = $db->prepare("INSERT INTO application SET name=:name, mail=:email, year=:byear, sex=:pol, number_limb=:limbs, biography=:bio");
+  $stmt = $db->prepare("INSERT INTO application SET name=:name, email=:email, year=:byear, pol=:pol, limbs=:limbs, bio=:bio");
   $stmt->bindParam(':name', $name);
   $stmt->bindParam(':email', $email);
   $stmt->bindParam(':byear', $birth_year);
@@ -67,11 +67,11 @@ try {
   }
   
   
-  $id_p = $db->lastInsertId();
-  $sppe= $db->prepare("INSERT INTO power_pers SET id=:person, power=:power"); //было , name=:name")
-  $sppe->bindParam(':person', $id_p);
+  $id = $db->lastInsertId();
+  $sppe= $db->prepare("INSERT INTO super SET name=:name, per_id=:person");
+  $sppe->bindParam(':person', $id);
   foreach($superpowers as $inserting){
-	$sppe->bindParam(':power', $inserting);
+	$sppe->bindParam(':name', $inserting);
 	if($sppe->execute()==false){
 	  print_r($sppe->errorCode());
 	  print_r($sppe->errorInfo());
@@ -84,5 +84,5 @@ catch(PDOException $e){
   exit();
 }
 
-print_r("Данные отправлены в бд");
+print_r("Данные отправлены");
 ?>
