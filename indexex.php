@@ -1,11 +1,23 @@
 <?php
 header('Content-Type: text/html; charset=UTF-8');
-if ($_SERVER['REQUEST_METHOD'] != 'POST'){
-	print_r('Не POST методы не принимаются');
+
+// В суперглобальном массиве $_SERVER PHP сохраняет некторые заголовки запроса HTTP
+// и другие сведения о клиненте и сервере, например метод текущего запроса $_SERVER['REQUEST_METHOD'].
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+  // В суперглобальном массиве $_GET PHP хранит все параметры, переданные в текущем запросе через URL.
+  if (!empty($_GET['save'])) {
+    // Если есть параметр save, то выводим сообщение пользователю.
+    print('Спасибо, результаты сохранены.');
+  }
+  // Включаем содержимое файла form.php.
+  include('form.php');
+  // Завершаем работу скрипта.
+  exit();
 }
+
 $errors = FALSE;
 if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['year']) || empty($_POST['bio']) || empty($_POST['check1']) || $_POST['check1'] == false || !isset($_POST['super']) ){
-	print_r('Заполните пустые поля!');
+	print('Заполните пустые поля!');
 	exit();
 }
 $name = $_POST['name'];
@@ -37,26 +49,27 @@ if(!preg_match($mailreg,$email)){
 	print_r('Неверный формат email');
 	exit();
 }
-if($pol !== 1 && $pol !== 2){
+if($pol !== 'male' && $pol !== 'female'){
 	print_r('Неверный формат пола');
 	exit();
 }
-foreach($superpowers as $checking){
+/*foreach($superpowers as $checking){
 	if(array_search($checking,$list_sup)=== false){
 			print_r('Неверный формат суперсил');
 			exit();
 	}
-}
+}*/
 
 $user = 'u53002';
 $pass = '8089091';
 $db = new PDO('mysql:host=localhost;dbname=u53002', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
 try {
-  $stmt = $db->prepare("INSERT INTO application SET name=:name, email=:email, year=:byear, pol=:pol, limbs=:limbs, bio=:bio");
+  $stmt = $db->prepare("INSERT INTO application SET name=:name, mail=:email, year=:byear, sex=:pol, number_limb=:limbs, biography=:bio");
   $stmt->bindParam(':name', $name);
   $stmt->bindParam(':email', $email);
   $stmt->bindParam(':byear', $birth_year);
-  $stmt->bindParam(':pol', $pol);
+  $p =  $pol == 'female' ? 2 : 1;
+  $stmt->bindParam(':pol', $p);
   $stmt->bindParam(':limbs', $limbs);
   $stmt->bindParam(':bio', $bio);
 
