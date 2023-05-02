@@ -53,12 +53,12 @@ if($pol !== 'male' && $pol !== 'female'){
 	print_r('Неверный формат пола');
 	exit();
 }
-/*foreach($superpowers as $checking){
+foreach($superpowers as $checking){
 	if(array_search($checking,$list_sup)=== false){
 			print_r('Неверный формат суперсил');
 			exit();
 	}
-}*/
+}
 
 $user = 'u53002';
 $pass = '8089091';
@@ -81,7 +81,7 @@ try {
   
   
   $id = $db->lastInsertId();
-  $sppe= $db->prepare("INSERT INTO super SET name=:name, per_id=:person");
+  $sppe= $db->prepare("INSERT INTO power_pers SET id=:person, power=:name");
   $sppe->bindParam(':person', $id);
   foreach($superpowers as $inserting){
 	$sppe->bindParam(':name', $inserting);
