@@ -60,9 +60,9 @@
                 Суперспособности:
                 
                     <select name="super" multiple="multiple">
-                    <option value="inv" selected="selected">Бессмертие</option>
-                    <option value="walk">Прохождение сквозь стены</option>
-                    <option value="fly">Левитация</option>
+                    <option value="1" selected="selected">Бессмертие</option>
+                    <option value="2">Прохождение сквозь стены</option>
+                    <option value="3">Левитация</option>
                     </select>
                 
             </p>
