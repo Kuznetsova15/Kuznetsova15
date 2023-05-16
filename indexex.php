@@ -41,12 +41,12 @@ if($pol !== 'male' && $pol !== 'female'){
 	print_r('Неверный формат пола');
 	exit();
 }
-foreach($superpowers as $checking){
+/* foreach($superpowers as $checking){
 	if(array_search($checking,$list_sup)=== false){
 			print_r('Неверный формат суперсил');
 			exit();
 	}
-}
+} */
 
 $user = 'u53002';
 $pass = '8089091';
