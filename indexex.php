@@ -1,23 +1,11 @@
 <?php
 header('Content-Type: text/html; charset=UTF-8');
-
-// В суперглобальном массиве $_SERVER PHP сохраняет некторые заголовки запроса HTTP
-// и другие сведения о клиненте и сервере, например метод текущего запроса $_SERVER['REQUEST_METHOD'].
-if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-  // В суперглобальном массиве $_GET PHP хранит все параметры, переданные в текущем запросе через URL.
-  if (!empty($_GET['save'])) {
-    // Если есть параметр save, то выводим сообщение пользователю.
-    print('Спасибо, результаты сохранены.');
-  }
-  // Включаем содержимое файла form.php.
-  include('form.php');
-  // Завершаем работу скрипта.
-  exit();
+if ($_SERVER['REQUEST_METHOD'] != 'POST'){
+	print_r('Не POST методы не принимаются');
 }
-
 $errors = FALSE;
 if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['year']) || empty($_POST['bio']) || empty($_POST['check1']) || $_POST['check1'] == false || !isset($_POST['super']) ){
-	print('Заполните пустые поля!');
+	print_r('Заполните пустые поля!');
 	exit();
 }
 $name = $_POST['name'];
@@ -28,10 +16,10 @@ $limbs = intval($_POST['radio-2']);
 $superpowers = array($_POST['super']);
 $bio= $_POST['bio'];
 
-$bioreg = "/^\s*\w+[\w\s\.,-]*$/";
+$bioreg = "/^\s*\w+[\w\s\.,-]*$/"><;
 $reg = "/^\w+[\w\s-]*$/";
 $mailreg = "/^[\w\.-]+@([\w-]+\.)+[\w-]{2,4}$/";
-$list_sup = array(1, 2, 3);
+$list_sup = array('inv','walk','fly');
 
 if(!preg_match($reg,$name)){
 	print_r('Неверный формат имени');
@@ -53,12 +41,12 @@ if($pol !== 'male' && $pol !== 'female'){
 	print_r('Неверный формат пола');
 	exit();
 }
-/*foreach($superpowers as $checking){
+foreach($superpowers as $checking){
 	if(array_search($checking,$list_sup)=== false){
 			print_r('Неверный формат суперсил');
 			exit();
 	}
-}*/
+}
 
 $user = 'u53002';
 $pass = '8089091';
@@ -68,8 +56,7 @@ try {
   $stmt->bindParam(':name', $name);
   $stmt->bindParam(':email', $email);
   $stmt->bindParam(':byear', $birth_year);
-  $p =  $pol == 'female' ? 2 : 1;
-  $stmt->bindParam(':pol', $p);
+  $stmt->bindParam(':pol', $pol);
   $stmt->bindParam(':limbs', $limbs);
   $stmt->bindParam(':bio', $bio);
 
@@ -80,11 +67,11 @@ try {
   }
   
   
-  $id = $db->lastInsertId();
-  $sppe= $db->prepare("INSERT INTO power_pers SET id=:person, power=:name");
-  $sppe->bindParam(':person', $id);
+  $id_p = $db->lastInsertId();
+  $sppe= $db->prepare("INSERT INTO power_pers SET id=:person, power=:power"); //было , name=:name")
+  $sppe->bindParam(':person', $id_p);
   foreach($superpowers as $inserting){
-	$sppe->bindParam(':name', $inserting);
+	$sppe->bindParam(':power', $inserting);
 	if($sppe->execute()==false){
 	  print_r($sppe->errorCode());
 	  print_r($sppe->errorInfo());
@@ -97,5 +84,5 @@ catch(PDOException $e){
   exit();
 }
 
-print_r("Данные отправлены");
+print_r("Данные отправлены в бд");
 ?>
