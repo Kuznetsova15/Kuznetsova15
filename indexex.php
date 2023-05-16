@@ -79,7 +79,7 @@ try {
   exit();
   }
   
-  /*
+  
   $id = $db->lastInsertId();
   $sppe= $db->prepare("INSERT INTO super SET name=:name, per_id=:person");
   $sppe->bindParam(':person', $id);
@@ -90,8 +90,8 @@ try {
 	  print_r($sppe->errorInfo());
 	  exit();
 	}
-  } */
-
+  } 
+}
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
   exit();
