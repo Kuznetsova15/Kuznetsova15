@@ -66,7 +66,7 @@ try {
   exit();
   }
   
-  
+ /* 
   $id_p = $db->lastInsertId();
   $sppe= $db->prepare("INSERT INTO power_pers SET id=:person, power=:power"); //было , name=:name")
   $sppe->bindParam(':person', $id_p);
@@ -77,7 +77,7 @@ try {
 	  print_r($sppe->errorInfo());
 	  exit();
 	}
-  }
+  } */
 }
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
