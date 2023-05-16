@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     print('Спасибо, результаты сохранены.');
   }
   // Включаем содержимое файла form.php.
-  include('index0.html');
+  include('form.php');
   // Завершаем работу скрипта.
   exit();
 }
