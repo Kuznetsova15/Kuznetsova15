@@ -1,4 +1,4 @@
-//https://u53002.kubsu-dev.ru/Kuznetsova15.github.io/index0.html
+//http://u53002.kubsu-dev.ru/Kuznetsova15.github.io/index0.html
 <?php
 header('Content-Type: text/html; charset=UTF-8');
 
